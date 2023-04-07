@@ -1,4 +1,4 @@
-# la-semaine
+# la-semaine - Work Day Scheduler
 
 ## Description:
 The creation of a planner that would help anyone schedule their day. The scheduler provides standard business hours of 9am through 5pm. 
