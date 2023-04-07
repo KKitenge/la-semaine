@@ -33,16 +33,28 @@ $(function () {
   //var userInput = $(".description").localStorage.setItem("userInput", userInput);
    
   // TODO: Add a listener for click events on the save button.
-    // $(".saveBtn").on("click", function(){ 
-    //   console.log("this")
+    $(".saveBtn").on("click", function(){ 
+      var element = $(this); // this is going to be the button clicked
+      var userInput = element.siblings("textarea").val() // value typed in by user
+      console.log(userInput)
+      var hour = element.parent().attr("id")// hour-#
+      console.log(hour)
+      localStorage.setItem("userInputStringify", JSON.stringify(userInput));
+      localStorage.setItem("userInput", userInput);
 
-      $(".description").each(function() {
-      console.log('happy')
-
-      var userInput = $(this).attr("class");
+      
+      // localStorage.setItem("userInput", userInput);
       // localStorage.setItem("userInputStringify", JSON.stringify(userInput));
       // localStorage.setItem("userInput", userInput);
-      console.log(userInput)
+      // localStorage.setItem("ArrayStringify", JSON.stringify(["userInput", ]));
+	    // localStorage.setItem("Array", ["userInput", ]);
+
+      // $(".description").each(function() {
+      // console.log('happy')
+      // var userInput = $(this).attr("class");
+      // localStorage.setItem("userInputStringify", JSON.stringify(userInput));
+      // localStorage.setItem("userInput", userInput);
+      // console.log(userInput)
 
   });
   
