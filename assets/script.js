@@ -7,7 +7,7 @@ $(function () {
     console.log("this")
     var elementTimeBlock = $(this).attr("id").split("-")[1];
     console.log(elementTimeBlock);
-    var todaysTime = dayjs().format('H');
+    var todaysTime = dayjs().format('h');
     console.log(todaysTime);
   //compare current timeblock to today's time and add attribute for class for colors
       //if less than, class of past, if equal class of present, if greater, future
@@ -30,6 +30,7 @@ $(function () {
       localStorage.setItem(hour, userInput);
 
   });
+  
   
   // TODO: Add code to display the current date in the header of the page.
     var today = dayjs().format('dddd, MMMM D, YYYY h:mm A');
