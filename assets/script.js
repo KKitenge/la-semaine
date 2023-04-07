@@ -19,27 +19,15 @@ $(function () {
       console.log(todaysTime)
   });
 
-    // TODO: Add a listener for click events on the save button.
-    $(".saveBtn").on("click", function(){       
+    // TODO: Add a listener for click events on the save button and save data to localstorage.
+    $(".saveBtn").on("click", function(event){
+      event.preventDefault();       
       var element = $(this); // this is going to be the button clicked
       var userInput = element.siblings("textarea").val(); // value typed in by user
       console.log(userInput);
       var hour = element.parent().attr("id"); // hour-#
       console.log(hour);
-      // var savedInfo = [userInput, hour];
-      // localStorage.setItem("savedInfo", JSON.stringify(savedInfo));
-      // localStorage.setItem("userInput", savedInfo);
-      // localStorage.setItem("ArrayStringify", JSON.stringify(["userInput", 1,2]));
-	    // localStorage.setItem("Array", ["userInput", 1,2]);  
-      
-      var enteredTime = $(this).parent().attr('id');
-      var textarea = $(this).siblings('textarea').val();
-      localStorage.setItem(enteredTime, textarea);
-      $('#hour-9 textarea').val(localStorage.getItem('hour-9'));
-      $('#hour-10 textarea').val(localStorage.getItem('hour-10'));
-      $('#hour-11 textarea').val(localStorage.getItem('hour-11'));
-      $('#hour-12 textarea').val(localStorage.getItem('hour-12'));
-     
+      localStorage.setItem(hour, userInput);
 
   });
   
