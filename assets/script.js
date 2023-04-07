@@ -7,7 +7,7 @@ $(function () {
     console.log("this")
     var elementTimeBlock = $(this).attr("id").split("-")[1];
     console.log(elementTimeBlock);
-    var todaysTime = dayjs().format('h');
+    var todaysTime = dayjs().format('H');
     console.log(todaysTime);
   //compare current timeblock to today's time and add attribute for class for colors
       //if less than, class of past, if equal class of present, if greater, future
