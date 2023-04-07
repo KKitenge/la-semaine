@@ -37,3 +37,15 @@ $(function () {
     $('#currentDay').text(today);
     // console.log(today)
  });
+
+ // This function gets the data out of local storage and displays it on the page
+    function displayLocalStorage(){
+    $(".time-block").each(function() {
+    var blockHour = $(this).attr("id");
+    console.log(blockHour)
+    var userInput = localStorage.getItem(blockHour);
+    $(this).children("textarea").val(userInput);
+  });
+}
+
+displayLocalStorage();
